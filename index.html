@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Monster V Human</title>
+</head>
+<body>
+  <div id="app">
+    <div class="body-container">
+      <div class="game-board">
+        <div class="lifebars-container">
+          <div class="human-lifebar">
+            <h1>YOU</h1>
+            <div class="lifebar-container">
+              <div 
+                class="lifebar" 
+                style="background-color: green; margin: 0; color: white;"
+                :style="{width: playerHealth + '%'}"
+              >{{ playerHealth }}</div>
+            </div>
+          </div>
+          <div class="monster-lifebar">
+            <h1>MONSTER</h1>
+            <div class="lifebar-container">
+              <div 
+                class="lifebar" 
+                style="background-color: green; margin: 0; color: white;"
+                :style="{width: monsterHealth + '%'}"
+              >
+              {{ monsterHealth }}
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="game-pads" v-if="!gameIsRunning">
+          <button class="startNew-game" @click="startGame">START NEW GAME</button>
+        </div>
+        <div class="game-pads" v-else>
+          <button class="attack" @click="attack">ATTACK</button>
+          <button class="special-attack" @click="specialAttack">SPECIAL ATTACKS</button>
+          <button class="heal" @click="heal">HEAL</button>
+          <button class="give-up" @click="giveUp">GIVE UP</button>
+        </div>
+        <div class="game-pads" v-if="turns.length > 0">
+          <ul>
+            <li v-for="turn in turns"
+            :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
+              {{ turn.text }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script src="./js/script.js"></script>
+</html>

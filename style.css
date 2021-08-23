@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body-container {
+  margin: 0 auto;
+}
+
+.game-board {
+  /* width: 75%; */
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.lifebars-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.human-lifebar {
+  text-align: center;
+  width: 30%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.lifebar-container {
+  background: rgb(190, 190, 190);
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.lifebar {
+  background-color: rgb(238, 238, 238);
+  border-radius: 3px;
+  width: 80%; 
+  height: 3rem;
+  margin-top: 1rem;
+  transition: width 500ms;
+}
+
+.monster-lifebar {
+  text-align: center;
+  width: 30%;
+}
+
+.game-pads {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 7px #d0d0d0;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border: 2 px solid transparent;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #d0d0d0;
+}
+
+button:hover,
+button:focus,
+button:active {
+  border: 2px solid rgb(96, 96, 255);
+}
+
+.startNew-game {
+  background-color: rgb(102, 196, 71);
+}
+
+.inGame-pads {
+}
+
+.attack {
+  background-color: rgb(197, 61, 61);
+}
+
+.special-attack {
+  background-color: rgb(163, 163, 0);
+  margin: 0 1rem;
+}
+
+.heal {
+  background-color: rgb(55, 206, 55);
+  margin-right: 1rem;
+}
+
+.give-up {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  width: 50%;
+}
+
+.player-turn {
+  background-color: rgb(189, 189, 255);
+  color: rgb(0, 0, 255);
+}
+
+.monster-turn {
+  background-color: rgb(255, 190, 190);
+  color: rgb(255, 0, 0);
+}
